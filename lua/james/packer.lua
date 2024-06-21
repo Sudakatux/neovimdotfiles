@@ -24,19 +24,18 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/playground')
 	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
-	use('tpope/vim-fugitive')
 	use('tpope/vim-surround')
 	use('tpope/vim-commentary')
     use('nvim-tree/nvim-tree.lua')
     use('nvim-tree/nvim-web-devicons')
 
-use {
-  "pmizio/typescript-tools.nvim",
-  requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-  config = function()
-    require("typescript-tools").setup {}
-  end,
-}
+    use {
+        "pmizio/typescript-tools.nvim",
+        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+        config = function()
+            require("typescript-tools").setup {}
+        end,
+    }
 
 
     -- upon renaming i expect to rename project wise
@@ -71,6 +70,12 @@ use {
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig"
 	})
+
+
+    -- GIT plugins
+
+    use('lewis6991/gitsigns.nvim')
+    use('tpope/vim-fugitive')
 
 	-- use {
 	-- 	'VonHeikemen/lsp-zero.nvim',
