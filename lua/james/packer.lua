@@ -16,9 +16,19 @@ return require('packer').startup(function(use)
 	}
 
 	-- The Color scheme
-	use { "rose-pine/neovim", as = "rose-pine", config = function ()
-		vim.cmd('colorscheme rose-pine')
+	-- use { "rose-pine/neovim", as = "rose-pine", config = function ()
+	-- 	vim.cmd('colorscheme rose-pine')
+	-- end} 
+
+
+	-- use { "morhetz/gruvbox", as = "gruvbox", config = function ()
+	-- 	vim.cmd('colorscheme gruvbox')
+	-- end} 
+    
+	use { "navarasu/onedark.nvim", as = "onedark", config = function ()
+		vim.cmd('colorscheme onedark')
 	end} 
+
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
