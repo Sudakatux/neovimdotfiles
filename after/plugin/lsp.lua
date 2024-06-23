@@ -25,6 +25,12 @@ lspconfig.prismals.setup {
     capabilities = capabilities
 }
 
+local cljconfig = lspconfig["clojure_lsp"]
+cljconfig.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
 
 -- I dont think i need this
 vim.api.nvim_create_autocmd('LspAttach', {
